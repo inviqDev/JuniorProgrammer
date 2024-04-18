@@ -26,7 +26,10 @@ public abstract class Unit : MonoBehaviour,
 
     private void Start()
     {
-
+        if (MainManager.instance != null)
+        {
+            SetColor(MainManager.instance.SelectedColor);
+        }
     }
 
     void SetColor(Color c)
